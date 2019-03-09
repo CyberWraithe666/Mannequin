@@ -1,0 +1,41 @@
+var iFileName = "Mannequin [Scroll of Strange Races work, transcribed by Tadd Cousins].js";
+RequiredSheetVersion(12.999);
+
+RaceList["Mannequin"] = {
+	regExpSearch : /^(?=.*mannequin).*$/i,
+	name : "Mannequin",
+	sortname : "Mannequin",
+	source : ["HB", 0],
+	plural : "Mannequins",
+	size : 3,
+	speed : {walk : { spd : 30, enc : 20 } },
+	languageProfs : ["Common", 1],
+	vision : [["Darkvision", 60]],
+	savetxt : { immune : ["poison", "disease"] },
+	dmgres : ["Poison"],
+	skills : [" Deception, Intimidation, Performance, or Persuasion", 1],
+	age : " are fully sentient at 3 years and live for as long as they have a repairable body.",
+	height : " stand between 4 and 7 feet tall (4'8\" + 2d6\")",
+	weight : " weigh around 150 lb (115 + 2d4 \xD7 2d6 lb)",
+	heightMetric : " stand between 1,2 and 1,5 metres tall (110 + 5d4 cm)",
+	weightMetric : " weigh around 70 kg (55 + 5d4 \xD7 4d6 / 10 kg)",
+	improvements : "Mannequin: +2 Charisma, +1 Intelligence;",
+	scores : [0, 0, 0, 1, 0, 2],
+	trait : "Mannequin (+2 Charisma, +1 Intelligence)\n   Sentient Construct: Even though you are made from nonorganic material, you are a sentient lifeform. You are immune to disease and you don't need to eat or breathe. You don't require sleep, but you must enter an inactive state for 8 hours to gain the benefits of a long rest.\n   Bloodless: You are immune to poison damage and the poisoned condition.\n   Inanimate Design: While you remain motionless, you have advantage on any ability checks made to disguise yourself as an inanimate version of your form.\n   Masquerade: You can cast the disguise self spell with this trait, using Charisma as your spell casting ability for it. You can cast this spell a number of times equal to your proficiency bonus. After you use this trait, you can't use it again until you finish a long rest. ",
+	spellcastingAbility : 6,
+	features : {
+		"Masquerade" : {
+			name : "Masquerade",
+			minlevel : 0,
+			usages : "prof",
+			recovery : "long rest",
+			action : ["action", ""],
+			spellcastingBonus : {
+				name : "Masquerade",
+				spells : ["disguise self"],
+				selection : ["disguise self"],
+				atwill : true,
+			}
+		}
+	}
+};
